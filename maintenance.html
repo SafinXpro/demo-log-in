@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maintenance | Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 bg-orange-500 text-white flex flex-col p-5">
+    <div class="text-2xl font-bold mb-8">Sunstar Elevator</div>
+    <nav class="flex flex-col space-y-4">
+      <a href="dashboard.html" class="hover:bg-orange-600 py-2 px-3 rounded">Dashboard</a>
+      <a href="new-installation.html" class="hover:bg-orange-600 py-2 px-3 rounded">New Installation</a>
+      <a href="maintenance.html" class="bg-orange-600 py-2 px-3 rounded">Maintenance</a>
+      <a href="service-history.html" class="hover:bg-orange-600 py-2 px-3 rounded">Service History</a>
+      <a href="technicians.html" class="hover:bg-orange-600 py-2 px-3 rounded">Technicians</a>
+      <a href="settings.html" class="hover:bg-orange-600 py-2 px-3 rounded">Settings</a>
+    </nav>
+    <div class="mt-auto pt-6 border-t border-orange-300">
+      <a href="login.html" class="block hover:bg-orange-600 py-2 px-3 rounded text-center">Logout</a>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-8">
+    <h1 class="text-2xl font-bold text-gray-700 mb-6">Maintenance Schedule</h1>
+
+    <!-- Add Maintenance Task Form -->
+    <form class="bg-white p-6 rounded-xl shadow-md max-w-lg mb-8">
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-1">Elevator ID</label>
+        <input type="text" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" placeholder="Enter Elevator ID">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-1">Maintenance Date</label>
+        <input type="date" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-1">Technician</label>
+        <select class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+          <option>Select Technician</option>
+          <option>Bashar</option>
+          <option>Rafiqul</option>
+          <option>Shahin</option>
+        </select>
+      </div>
+
+      <div class="mb-4">
+        <label class="block text-gray-700 font-medium mb-1">Maintenance Type</label>
+        <select class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+          <option>Routine Check</option>
+          <option>Repair</option>
+          <option>Upgrade / Modification</option>
+        </select>
+      </div>
+
+      <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Add Task</button>
+    </form>
+
+    <!-- Scheduled Maintenance Table -->
+    <div class="bg-white p-6 rounded-xl shadow-md">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold text-gray-700">Scheduled Maintenance</h2>
+      </div>
+
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-gray-200 text-gray-600 uppercase text-sm">
+            <th class="py-3 px-4">Elevator ID</th>
+            <th class="py-3 px-4">Technician</th>
+            <th class="py-3 px-4">Type</th>
+            <th class="py-3 px-4">Date</th>
+            <th class="py-3 px-4">Status</th>
+          </tr>
+        </thead>
+        <tbody class="text-gray-700">
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-3 px-4">ELV-001</td>
+            <td class="py-3 px-4">Bashar</td>
+            <td class="py-3 px-4">Routine Check</td>
+            <td class="py-3 px-4">2025-11-01</td>
+            <td class="py-3 px-4"><span class="bg-yellow-200 text-yellow-700 px-2 py-1 rounded text-sm">Pending</span></td>
+          </tr>
+          <tr class="border-b hover:bg-gray-50">
+            <td class="py-3 px-4">ELV-002</td>
+            <td class="py-3 px-4">Rafiqul</td>
+            <td class="py-3 px-4">Repair</td>
+            <td class="py-3 px-4">2025-11-02</td>
+            <td class="py-3 px-4"><span class="bg-green-200 text-green-700 px-2 py-1 rounded text-sm">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Elevator Management System</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-t from-gray-700 to-orange-700 min-h-screen flex items-center justify-center">
+
+  <div class="w-full max-w-md bg-[#ffffff] rounded-xl shadow-md p-8">
+    <!-- Logo / Title -->
+    <div class="text-center mb-6">
+       <div class="h-24 w-36 mx-auto"><img class="w-full h-full " src="./assets/Since_1999_20250918_230702_0000__1_-removebg-preview.png" alt=""></div>
+      <p class="text-gray-500 mt-1">Create your account to get started</p>
+    </div>
+
+    <!-- Register Form -->
+    <form>
+      <!-- Full Name -->
+      <div class="mb-4">
+        <label for="name" class="block text-gray-700 font-medium mb-1">Full Name</label>
+        <input 
+          type="text" 
+          id="name" 
+          placeholder="Enter your full name"
+          class="w-full px-4 py-2 border border-[#000000] rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+          required
+        />
+      </div>
+
+      <!-- Email -->
+      <div class="mb-4">
+        <label for="email" class="block text-gray-700 font-medium mb-1">Email Address</label>
+        <input 
+          type="email" 
+          id="email" 
+          placeholder="Enter your email"
+          class="w-full px-4 py-2 border  border-[#000000] rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+          required
+        />
+      </div>
+
+      <!-- Phone -->
+      <div class="mb-4">
+        <label for="phone" class="block text-gray-700 font-medium mb-1">Phone Number</label>
+        <input 
+          type="text" 
+          id="phone" 
+          placeholder="Enter your phone number"
+          class="w-full px-4 py-2 border border-[#000000] rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+        />
+      </div>
+
+      <!-- Password -->
+      <div class="mb-4">
+        <label for="password" class="block text-gray-700 font-medium mb-1">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Create a password"
+          class="w-full px-4 py-2 border border-[#000000] rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+          required
+        />
+      </div>
+
+      <!-- Confirm Password -->
+      <div class="mb-6">
+        <label for="confirm-password" class="block text-gray-700 font-medium mb-1">Confirm Password</label>
+        <input 
+          type="password" 
+          id="confirm-password" 
+          placeholder="Confirm your password"
+          class="w-full px-4 py-2 border border-[#000000] rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
+          required
+        />
+      </div>
+
+      <!-- Register Button -->
+      <button 
+        type="submit"
+        class="w-full bg-orange-500 text-white py-2 rounded-lg font-semibold hover:bg-orange-600 transition"
+      >
+        Create Account
+      </button>
+    </form>
+
+    <!-- Divider -->
+    <div class="my-6 flex items-center">
+      <div class="flex-grow h-px bg-gray-300"></div>
+      <span class="px-3 text-gray-400 text-sm">OR</span>
+      <div class="flex-grow h-px bg-gray-300"></div>
+    </div>
+
+    <!-- Login Redirect -->
+    <p class="text-center text-sm text-gray-600">
+      Already have an account?
+      <a href="login.html" class="text-orange-500 hover:underline font-medium">Login here</a>
+    </p>
+  </div>
+
+</body>
+</html>
