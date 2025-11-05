@@ -25,48 +25,72 @@
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 p-8">
-    <h1 class="text-2xl font-bold text-gray-700 mb-6">Maintenance Schedule</h1>
+  <main class="flex-1 p-8 bg-gradient-to-br from-orange-100 via-yellow-50 to-white min-h-screen">
+    <h1 class="text-2xl font-bold text-gray-700 mb-6">Maintenance Overview</h1>
+
+    <!-- Summary Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div class="bg-white p-5 rounded-xl shadow text-center border-t-4 border-orange-500">
+        <p class="text-gray-600 text-sm">Total Maintenance</p>
+        <p class="text-3xl font-bold text-gray-800 mt-1">25</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow text-center border-t-4 border-yellow-400">
+        <p class="text-gray-600 text-sm">Pending</p>
+        <p class="text-3xl font-bold text-yellow-600 mt-1">8</p>
+      </div>
+      <div class="bg-white p-5 rounded-xl shadow text-center border-t-4 border-green-500">
+        <p class="text-gray-600 text-sm">Completed</p>
+        <p class="text-3xl font-bold text-green-600 mt-1">17</p>
+      </div>
+    </div>
+
+    <!-- Search & Filter -->
+    <div class="flex flex-col md:flex-row items-center justify-between mb-6 gap-3">
+      <input type="text" placeholder="Search by Elevator ID or Technician" 
+        class="w-full md:w-1/2 border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+      <select class="border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+        <option>All Status</option>
+        <option>Pending</option>
+        <option>Completed</option>
+      </select>
+    </div>
 
     <!-- Add Maintenance Task Form -->
-    <form class="bg-white p-6 rounded-xl shadow-md max-w-lg mb-8">
-      <div class="mb-4">
-        <label class="block text-gray-700 font-medium mb-1">Elevator ID</label>
-        <input type="text" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" placeholder="Enter Elevator ID">
+    <form class="bg-white p-6 rounded-xl shadow-md max-w-2xl mb-8">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Add Maintenance Task</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Elevator ID</label>
+          <input type="text" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" placeholder="Enter Elevator ID">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Maintenance Date</label>
+          <input type="date" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Technician</label>
+          <select class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+            <option>Select Technician</option>
+            <option>Bashar</option>
+            <option>Rafiqul</option>
+            <option>Shahin</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-gray-700 font-medium mb-1">Maintenance Type</label>
+          <select class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+            <option>Routine Check</option>
+            <option>Repair</option>
+            <option>Upgrade / Modification</option>
+          </select>
+        </div>
       </div>
-
-      <div class="mb-4">
-        <label class="block text-gray-700 font-medium mb-1">Maintenance Date</label>
-        <input type="date" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
-      </div>
-
-      <div class="mb-4">
-        <label class="block text-gray-700 font-medium mb-1">Technician</label>
-        <select class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
-          <option>Select Technician</option>
-          <option>Bashar</option>
-          <option>Rafiqul</option>
-          <option>Shahin</option>
-        </select>
-      </div>
-
-      <div class="mb-4">
-        <label class="block text-gray-700 font-medium mb-1">Maintenance Type</label>
-        <select class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
-          <option>Routine Check</option>
-          <option>Repair</option>
-          <option>Upgrade / Modification</option>
-        </select>
-      </div>
-
-      <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Add Task</button>
+      <button type="submit" class="mt-4 bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Add Task</button>
     </form>
 
     <!-- Scheduled Maintenance Table -->
     <div class="bg-white p-6 rounded-xl shadow-md">
-      <div class="flex justify-between items-center mb-4">
-        <h2 class="text-lg font-semibold text-gray-700">Scheduled Maintenance</h2>
-      </div>
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Scheduled Maintenance</h2>
 
       <table class="w-full text-left border-collapse">
         <thead>
@@ -76,6 +100,7 @@
             <th class="py-3 px-4">Type</th>
             <th class="py-3 px-4">Date</th>
             <th class="py-3 px-4">Status</th>
+            <th class="py-3 px-4 text-center">Action</th>
           </tr>
         </thead>
         <tbody class="text-gray-700">
@@ -85,6 +110,9 @@
             <td class="py-3 px-4">Routine Check</td>
             <td class="py-3 px-4">2025-11-01</td>
             <td class="py-3 px-4"><span class="bg-yellow-200 text-yellow-700 px-2 py-1 rounded text-sm">Pending</span></td>
+            <td class="py-3 px-4 text-center">
+              <button class="bg-orange-500 text-white px-3 py-1 rounded text-sm hover:bg-orange-600">Update</button>
+            </td>
           </tr>
           <tr class="border-b hover:bg-gray-50">
             <td class="py-3 px-4">ELV-002</td>
@@ -92,6 +120,9 @@
             <td class="py-3 px-4">Repair</td>
             <td class="py-3 px-4">2025-11-02</td>
             <td class="py-3 px-4"><span class="bg-green-200 text-green-700 px-2 py-1 rounded text-sm">Completed</span></td>
+            <td class="py-3 px-4 text-center">
+              <button class="bg-orange-500 text-white px-3 py-1 rounded text-sm hover:bg-orange-600">Update</button>
+            </td>
           </tr>
         </tbody>
       </table>

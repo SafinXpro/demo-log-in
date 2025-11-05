@@ -6,75 +6,98 @@
   <title>Settings | Admin</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen flex">
+<body class="min-h-screen flex bg-gradient-to-br from-gray-100 via-gray-200 to-gray-100">
 
   <!-- Sidebar -->
-  <aside class="w-64 bg-orange-500 text-white flex flex-col p-5">
-    <div class="text-2xl font-bold mb-8">Sunstar Elevator</div>
-    <nav class="flex flex-col space-y-4">
-      <a href="dashboard.html" class="hover:bg-orange-600 py-2 px-3 rounded">Dashboard</a>
-      <a href="new-installation.html" class="hover:bg-orange-600 py-2 px-3 rounded">New Installation</a>
-      <a href="maintenance.html" class="hover:bg-orange-600 py-2 px-3 rounded">Maintenance</a>
-      <a href="service-history.html" class="hover:bg-orange-600 py-2 px-3 rounded">Service History</a>
-      <a href="technicians.html" class="hover:bg-orange-600 py-2 px-3 rounded">Technicians</a>
-      <a href="settings.html" class="bg-orange-600 py-2 px-3 rounded">Settings</a>
+  <aside class="w-64 bg-orange-500 text-white flex flex-col p-5 shadow-xl">
+    <div class="text-2xl font-bold mb-8 tracking-wide">Sunstar Elevator</div>
+    <nav class="flex flex-col space-y-3">
+      <a href="dashboard.html" class="hover:bg-orange-600 py-2 px-3 rounded transition">Dashboard</a>
+      <a href="new-installation.html" class="hover:bg-orange-600 py-2 px-3 rounded transition">New Installation</a>
+      <a href="maintenance.html" class="hover:bg-orange-600 py-2 px-3 rounded transition">Maintenance</a>
+      <a href="service-history.html" class="hover:bg-orange-600 py-2 px-3 rounded transition">Service History</a>
+      <a href="technicians.html" class="hover:bg-orange-600 py-2 px-3 rounded transition">Technicians</a>
+      <a href="settings.html" class="bg-orange-600 py-2 px-3 rounded shadow-inner">Settings</a>
     </nav>
     <div class="mt-auto pt-6 border-t border-orange-300">
-      <a href="login.html" class="block hover:bg-orange-600 py-2 px-3 rounded text-center">Logout</a>
+      <a href="login.html" class="block hover:bg-orange-600 py-2 px-3 rounded text-center transition">Logout</a>
     </div>
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 p-8">
-    <h1 class="text-2xl font-bold text-gray-700 mb-6">Settings</h1>
+  <main class="flex-1 p-8 bg-gradient-to-br from-orange-100 via-yellow-50 to-white min-h-screen">
+    <h1 class="text-3xl font-bold text-gray-700 mb-8">⚙️ Settings</h1>
 
-    <!-- Account Details Form -->
-    <div class="bg-white p-6 rounded-xl shadow-md max-w-lg mb-8">
-      <h2 class="text-lg font-semibold text-gray-700 mb-4">Account Details</h2>
-      <form>
-        <div class="mb-4">
+    <!-- Account Details -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg mb-10 border border-gray-200 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <span class="text-orange-500">👤</span> Account Details
+      </h2>
+      <form id="accountForm" class="space-y-5">
+        <div>
           <label class="block text-gray-700 font-medium mb-1">Admin Name</label>
-          <input type="text" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" value="Safin Ahmed">
+          <input type="text" class="w-full border px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-400" value="Safin Ahmed">
         </div>
 
-        <div class="mb-4">
+        <div>
           <label class="block text-gray-700 font-medium mb-1">Email Address</label>
-          <input type="email" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" value="admin@example.com">
+          <input type="email" class="w-full border px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-400" value="admin@example.com">
         </div>
 
-        <div class="mb-4">
+        <div>
           <label class="block text-gray-700 font-medium mb-1">Phone Number</label>
-          <input type="text" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" value="017xxxxxxxx">
+          <input type="text" class="w-full border px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-400" value="017xxxxxxxx">
         </div>
 
-        <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Update Details</button>
+        <button type="button" onclick="showAlert('Details updated successfully!')" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 shadow-md transition">
+          Update Details
+        </button>
       </form>
     </div>
 
-    <!-- Change Password Form -->
-    <div class="bg-white p-6 rounded-xl shadow-md max-w-lg">
-      <h2 class="text-lg font-semibold text-gray-700 mb-4">Change Password</h2>
-      <form>
-        <div class="mb-4">
+    <!-- Change Password -->
+    <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition">
+      <h2 class="text-xl font-semibold text-gray-700 mb-6 flex items-center gap-2">
+        <span class="text-orange-500">🔒</span> Change Password
+      </h2>
+      <form id="passwordForm" class="space-y-5">
+        <div>
           <label class="block text-gray-700 font-medium mb-1">Current Password</label>
-          <input type="password" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+          <input type="password" class="w-full border px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-400">
         </div>
 
-        <div class="mb-4">
+        <div>
           <label class="block text-gray-700 font-medium mb-1">New Password</label>
-          <input type="password" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+          <input type="password" class="w-full border px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-400">
         </div>
 
-        <div class="mb-4">
+        <div>
           <label class="block text-gray-700 font-medium mb-1">Confirm New Password</label>
-          <input type="password" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400">
+          <input type="password" class="w-full border px-4 py-2 rounded-lg focus:ring-2 focus:ring-orange-400">
         </div>
 
-        <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Change Password</button>
+        <button type="button" onclick="showAlert('Password changed successfully!')" class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-600 shadow-md transition">
+          Change Password
+        </button>
       </form>
     </div>
 
+    <!-- Success Alert -->
+    <div id="alertBox" class="hidden fixed bottom-6 right-6 bg-green-500 text-white py-3 px-6 rounded-lg shadow-lg animate-bounce">
+      ✅ Changes saved successfully!
+    </div>
   </main>
+
+  <script>
+    function showAlert(message) {
+      const alertBox = document.getElementById('alertBox');
+      alertBox.textContent = message;
+      alertBox.classList.remove('hidden');
+      setTimeout(() => {
+        alertBox.classList.add('hidden');
+      }, 3000);
+    }
+  </script>
 
 </body>
 </html>

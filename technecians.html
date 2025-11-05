@@ -25,13 +25,15 @@
   </aside>
 
   <!-- Main Content -->
-  <main class="flex-1 p-8">
-    <h1 class="text-2xl font-bold text-gray-700 mb-6">Technicians</h1>
+  <main class="flex-1 p-8 bg-gradient-to-br from-orange-100 via-yellow-50 to-white min-h-screen">
+    <h1 class="text-2xl font-bold text-gray-700 mb-6">Technician Management</h1>
 
     <!-- Add Technician Form -->
-    <form class="bg-white p-6 rounded-xl shadow-md max-w-lg mb-8">
+    <form class="bg-white p-6 rounded-xl shadow-md max-w-lg mb-8 border border-orange-100">
+      <h2 class="text-lg font-semibold text-gray-700 mb-4">Add New Technician</h2>
+
       <div class="mb-4">
-        <label class="block text-gray-700 font-medium mb-1">Technician Name</label>
+        <label class="block text-gray-700 font-medium mb-1">Full Name</label>
         <input type="text" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" placeholder="Enter full name">
       </div>
 
@@ -42,15 +44,19 @@
 
       <div class="mb-4">
         <label class="block text-gray-700 font-medium mb-1">Email Address</label>
-        <input type="email" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" placeholder="Enter email">
+        <input type="email" class="w-full border px-4 py-2 rounded focus:ring-2 focus:ring-orange-400" placeholder="Enter email address">
       </div>
 
       <button type="submit" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">Add Technician</button>
     </form>
 
     <!-- Technician List Table -->
-    <div class="bg-white p-6 rounded-xl shadow-md">
-      <h2 class="text-lg font-semibold text-gray-700 mb-4">All Technicians</h2>
+    <div class="bg-white p-6 rounded-xl shadow-md border border-orange-100">
+      <div class="flex justify-between items-center mb-4">
+        <h2 class="text-lg font-semibold text-gray-700">All Technicians</h2>
+        <input type="text" placeholder="Search technician..." class="border px-3 py-2 rounded-lg focus:ring-2 focus:ring-orange-400">
+      </div>
+
       <table class="w-full text-left border-collapse">
         <thead>
           <tr class="bg-gray-200 text-gray-600 uppercase text-sm">
@@ -58,26 +64,28 @@
             <th class="py-3 px-4">Phone</th>
             <th class="py-3 px-4">Email</th>
             <th class="py-3 px-4">Status</th>
-            <th class="py-3 px-4">Action</th>
+            <th class="py-3 px-4">Actions</th>
           </tr>
         </thead>
         <tbody class="text-gray-700">
           <tr class="border-b hover:bg-gray-50">
-            <td class="py-3 px-4">Bashar</td>
+            <td class="py-3 px-4 font-medium">Bashar</td>
             <td class="py-3 px-4">017xxxxxxxx</td>
             <td class="py-3 px-4">bashar@example.com</td>
             <td class="py-3 px-4"><span class="bg-green-200 text-green-700 px-2 py-1 rounded text-sm">Active</span></td>
             <td class="py-3 px-4">
+              <button class="text-blue-500 hover:underline mr-2">View</button>
               <button class="text-orange-500 hover:underline mr-2">Edit</button>
               <button class="text-red-500 hover:underline">Delete</button>
             </td>
           </tr>
           <tr class="border-b hover:bg-gray-50">
-            <td class="py-3 px-4">Rafiqul</td>
+            <td class="py-3 px-4 font-medium">Rafiqul</td>
             <td class="py-3 px-4">018xxxxxxxx</td>
             <td class="py-3 px-4">rafiqul@example.com</td>
             <td class="py-3 px-4"><span class="bg-green-200 text-green-700 px-2 py-1 rounded text-sm">Active</span></td>
             <td class="py-3 px-4">
+              <button class="text-blue-500 hover:underline mr-2">View</button>
               <button class="text-orange-500 hover:underline mr-2">Edit</button>
               <button class="text-red-500 hover:underline">Delete</button>
             </td>
@@ -85,7 +93,6 @@
         </tbody>
       </table>
     </div>
-
   </main>
 
 </body>
