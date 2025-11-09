@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sun Star | Our Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <style>
+    :root { --hero-line-height: 1.05; }
+    .hero-title { font-weight:700; line-height: var(--hero-line-height); }
+    @media (max-width: 320px) { .hero-title { font-size:1.25rem; } }
+    @media (max-width: 375px) { .hero-title { font-size:1.4rem; } }
+    @media (max-width: 425px) { .hero-title { font-size:1.6rem; } }
+    @media (min-width: 768px) and (max-width: 1023px) { .hero-title { font-size:2.75rem; } }
+    @media (min-width: 1024px) { .hero-title { font-size:3rem; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-orange-100 via-yellow-50 to-white min-h-screen">
+
+<!-- Header -->
+<header class="bg-gradient-to-r from-white to-orange-600 text-black mx-auto">
+  <div class="container mx-auto px-4 py-4 flex items-center justify-between w-11/12">
+    <div class="flex items-center gap-4">
+      <img class="w-12 h-12" src="./assets/Since_1999_20250918_230702_0000__1_-removebg-preview.png" alt="Sun Star logo" />
+    </div>
+    <button id="menuBtn" class="sm:hidden p-2 rounded-md bg-white/80 text-gray-800" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav id="mainNav" class="hidden sm:flex items-center gap-6 text-black">
+      <a href="index.html" class="font-medium px-3 py-1 rounded hover:bg-white/60 transition">Home</a>
+      <a href="products.html" class="font-medium px-3 py-1 rounded hover:bg-white/60 transition">Products</a>
+      <a href="services.html" class="font-medium px-3 py-1 rounded bg-orange-200">Services</a>
+      <a href="#" class="font-medium px-3 py-1 rounded hover:bg-white/60 transition">About</a>
+      <a href="#" class="font-medium px-3 py-1 rounded hover:bg-white/60 transition">Contact</a>
+    </nav>
+    <div class="hidden sm:flex items-center">
+      <button class="bg-orange-400 text-white rounded-full px-4 py-2 font-bold hover:bg-orange-500 transition">Login</button>
+    </div>
+  </div>
+  <div id="mobileNav" class="sm:hidden hidden bg-white/90">
+    <div class="px-4 py-3 space-y-2">
+      <a href="index.html" class="block font-medium py-2 hover:bg-gray-100 rounded">Home</a>
+      <a href="products.html" class="block font-medium py-2 hover:bg-gray-100 rounded">Products</a>
+      <a href="services.html" class="block font-medium py-2 hover:bg-gray-100 rounded bg-orange-100">Services</a>
+      <a href="#" class="block font-medium py-2 hover:bg-gray-100 rounded">About</a>
+      <a href="#" class="block font-medium py-2 hover:bg-gray-100 rounded">Contact</a>
+      <div class="pt-2">
+        <button class="w-full bg-orange-400 text-white rounded px-4 py-2 font-bold">Login</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Main Services Section -->
+<main class="container mx-auto px-4 py-12 w-[1250px]">
+
+  <h1 class="hero-title text-4xl md:text-5xl font-bold text-gray-900 mb-8 text-center">
+    Our <span class="text-orange-600">Services</span>
+  </h1>
+
+  <p class="hero-sub text-base md:text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+    Discover our comprehensive elevator services designed to keep your systems safe, reliable, and efficient.
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+
+    <!-- Installation Card -->
+    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col hover:shadow-xl transition">
+      <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-gradient-to-br from-orange-400 to-orange-600 text-white">
+        <i class="fa-solid fa-tools fa-lg"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-orange-600">Installation</h2>
+      <p class="text-gray-700 flex-grow">
+        Professional elevator installation for residential, commercial, and industrial buildings, ensuring safety and compliance with all standards.
+      </p>
+      <button class="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-3 font-semibold transition w-full md:w-auto">
+        Get Quote
+      </button>
+    </div>
+
+    <!-- Maintenance Card -->
+    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col hover:shadow-xl transition">
+      <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-gradient-to-br from-orange-400 to-orange-600 text-white">
+        <i class="fa-solid fa-wrench fa-lg"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-orange-600">Maintenance</h2>
+      <p class="text-gray-700 flex-grow">
+        Routine maintenance plans designed to maximize the lifespan and safety of your elevator systems with timely inspections and repairs.
+      </p>
+      <button class="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-3 font-semibold transition w-full md:w-auto">
+        Get Quote
+      </button>
+    </div>
+
+    <!-- Customization Card -->
+    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col hover:shadow-xl transition">
+      <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-gradient-to-br from-orange-400 to-orange-600 text-white">
+        <i class="fa-solid fa-paint-roller fa-lg"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-orange-600">Customization</h2>
+      <p class="text-gray-700 flex-grow">
+        Tailor-made elevator solutions to match your building’s design and your specific needs with premium materials and smart technology.
+      </p>
+      <button class="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-3 font-semibold transition w-full md:w-auto">
+        Get Quote
+      </button>
+    </div>
+
+    <!-- Modernization Card -->
+    <div class="bg-white rounded-3xl shadow-lg p-8 flex flex-col hover:shadow-xl transition">
+      <div class="w-14 h-14 rounded-xl flex items-center justify-center mb-6 bg-gradient-to-br from-orange-400 to-orange-600 text-white">
+        <i class="fa-solid fa-sync fa-lg"></i>
+      </div>
+      <h2 class="text-2xl font-bold mb-3 text-orange-600">Modernization</h2>
+      <p class="text-gray-700 flex-grow">
+        Upgrade your existing elevator systems with the latest technologies for improved performance, efficiency, and safety.
+      </p>
+      <button class="mt-6 bg-orange-500 hover:bg-orange-600 text-white rounded-full px-6 py-3 font-semibold transition w-full md:w-auto">
+        Get Quote
+      </button>
+    </div>
+
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-br from-blue-900 to-gray-900 text-white py-8 px-4 mt-12">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 w-11/12">
+    <div>
+      <div class="text-2xl font-bold text-yellow-400">Sun Star</div>
+      <div class="text-yellow-200">Elevator & Engineering</div>
+      <p class="text-gray-300 mt-4">
+        Your trusted partner for premium elevator solutions across Bangladesh. Since 1999, we've been delivering safety, quality, and innovation with every project.
+      </p>
+      <div class="flex space-x-4 mt-6">
+        <a href="#" class="text-yellow-300 hover:text-yellow-500"><svg fill="currentColor" width="24" height="24"><circle cx="12" cy="12" r="10"/></svg></a>
+        <a href="#" class="text-yellow-300 hover:text-yellow-500"><svg fill="currentColor" width="24" height="24"><circle cx="12" cy="12" r="10"/></svg></a>
+        <a href="#" class="text-yellow-300 hover:text-yellow-500"><svg fill="currentColor" width="24" height="24"><circle cx="12" cy="12" r="10"/></svg></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-yellow-400 font-bold mb-4">Quick Links</h4>
+      <ul class="space-y-2 text-gray-300">
+        <li><a href="index.html" class="hover:text-yellow-200">Home</a></li>
+        <li><a href="products.html" class="hover:text-yellow-200">Products</a></li>
+        <li><a href="services.html" class="hover:text-yellow-200">Services</a></li>
+        <li><a href="#" class="hover:text-yellow-200">About</a></li>
+        <li><a href="#" class="hover:text-yellow-200">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-yellow-400 font-bold mb-4">Contact Info</h4>
+      <ul class="text-gray-300 text-sm space-y-2">
+        <li>📞 01711171391 / 01726643500</li>
+        <li>✉️ sunstarelevator.92@gmail.com</li>
+        <li>📍 House#04, Road#06, Sector#11, Uttara, Dhaka-1230</li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-gray-700 mt-8 pt-4 text-center text-xs text-gray-400">
+    © 2025 Sun Star Elevator & Engineering. <span class="text-yellow-300">All rights reserved.</span>
+  </div>
+</footer>
+
+<!-- Mobile menu toggle script -->
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  menuBtn?.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
+  });
+</script>
+
+</body>
+</html>
